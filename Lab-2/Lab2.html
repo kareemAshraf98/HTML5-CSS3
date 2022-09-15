@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangular</title>
+</head>
+<body>
+    <center>
+    <canvas width="600"
+    height="600"
+    style="border:3px solid black"
+    id="canvas"
+    ></canvas><br>
+    <h1>according to pythagoras theroem</h1>
+    <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>C</mi>
+        <mo>=</mo>
+        <msqrt>a2 + b2</msqrt>
+    </math>
+    </center>
+    <script>
+        var canvs = document.getElementById("canvas");
+        var ctx = canvs.getContext("2d");
+        ctx.beginPath();
+        ctx.lineTo(100,100);
+        ctx.lineTo(400,100)
+        ctx.lineTo(100,300);
+        ctx.lineTo(100,100);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "green";
+        ctx.stroke();
+        ctx.fill();
+        ctx.font = "25px Arial";
+        ctx.fillText("a",70,200);
+        ctx.fillText("c",300,200);
+        ctx.fillText("b",200,95);
+        ctx.closePath();
+    </script>
+</body>
+</html>

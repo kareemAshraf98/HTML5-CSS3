@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <center>
+    <label>Red :</label>
+    <input onchange="colors()" type="range" id="rRange" value="0" min="0" max="255"><br>
+    <label>Green :</label>
+    <input onchange="colors()" type="range" id="gRange" value="0" min="0" max="255"><br>
+    <label>Blue :</label>
+    <input onchange="colors()" type="range" id="bRange" value="0" min="0" max="255"><br>
+    <h1 id="words">change color dynamically by input range </h1>
+    </center>
+    <script>
+        let r = document.getElementById("rRange");
+        let g = document.getElementById("gRange");
+        let b = document.getElementById("bRange");
+        let rgb = `rgb(${r},${g},${b})`;
+        //console.log(r);
+
+        function colors(){
+        r = document.getElementById("rRange").value;
+        g = document.getElementById("gRange").value;
+        b = document.getElementById("bRange").value;
+        rgb = `rgb(${r},${g},${b})`;
+        console.log(rgb);
+        document.getElementById("words").style.color = rgb;
+    
+        }
+        //document.getElementById("words").addEventListener('input', colors);
+        
+        
+        
+    </script>
+</body>
+</html>

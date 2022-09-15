@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form task</title>
+    <style>
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        input[type=text], input[type=email] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+    
+        }
+        button:hover{
+            background-color: limegreen;
+        }
+        .user{
+            transition: all 2s;
+        }
+        .user:valid + label{
+            color: black;
+            display: none;
+        }
+        .email:valid{
+            border: black;
+        }
+        .email:valid + label{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <input class="user" type="text" placeholder="enter vaild name" required>
+            <label class="text">the required user name may only in seires letters </label><br>
+            <input class="email" type="email" placeholder="email@examol.com" required>
+            <label class="E-mail" >the required email must have '@'</label><br>
+            <button type="submit" >Change</button>
+        </form>
+    </div>
+</body>
+</html>

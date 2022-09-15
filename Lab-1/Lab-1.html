@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <center>
+    <video src="./frozen.mp4" type="vido/mp4"
+        width="700px"
+        poster="./HTML5&CSS3_Day1/Demo/frozen.jpg"
+        id="my-video"
+    ></video><br>
+
+    <input onchange="start(this)"  id="seekSlider" type="range" step="1" value="0" min="0" max="110">
+    <label  id="duration">00:00</label><br>
+
+    <button id="playBtn" onclick="playPause('my-video')" type="">Play</button>
+
+    <button id="stopBtn" onclick="pauseplay('my-video')" type="">Stop</button>
+
+    <button onclick="startAgain()" id="start-begin" type=""> << </button>
+
+    <button onclick="playBack()" id="back-five" type=""> < </button>
+
+    <button onclick="PlayForward()" id="forward-five" type=""> > </button>
+
+    <button onclick="endVideo()" id="end" type=""> >> </button>
+
+    <button onclick="muteSound()" id="mute" type=""> Mute </button>
+
+    <input id="sound" type="range" value="1" step="0.1" min="0" max="1"><br>
+
+    <button onclick="FullScreen()" id="full-screen">[&nbsp]</button><br>
+    <label id="speed" > Speed :</label>
+    <input onchange="speedVideo()" id="sRange" type="range" value="0" min="0" max="50">
+
+    </center>
+    <script src="Lab1.js"></script>
+</body>
+</html>

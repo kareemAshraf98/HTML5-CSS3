@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line</title>
+</head>
+<body>
+    <center>
+    <canvas width="600" 
+    height="600" 
+    style="border: 3px solid black"
+    id="line"
+    ></canvas>
+    </center>
+    <script>
+        var x = 0;
+        var y = 0;
+        var cnv = document.getElementById("line");
+        var ctx = cnv.getContext("2d");
+        ctx.beginPath();
+        ctx.lineTo(x,y);
+        ctx.strokeStyle = "black"
+        ctx.lineWidth = 4;
+        ctx.stroke();
+        ctx.closePath();
+       var time = setInterval(function (){
+            x +=5;
+            y +=5;
+            ctx.lineTo(x,y);
+            ctx.stroke();
+            if(x > cnv.width){
+                clearInterval(time);
+                alert("timeOut");
+            }
+        },100);
+        
+
+    </script>
+        <script>
+            window.MathJax = {
+              MathML: { extensions: ["mml3.js", "content-mathml.js"] },
+            };
+          </script>
+          <script
+            type="text/javascript"
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"
+        ></script>
+</body>
+</html>
